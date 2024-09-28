@@ -11,8 +11,8 @@
                         </a>
                     </li>
                     <li class="px-3"><a
-                            class=" text-decoration-none  nav-link {{ Route::currentRouteName() === 'comics' ? 'active' : '' }}"
-                            href="">
+                            class=" text-decoration-none  nav-link {{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}"
+                            href="{{ route('comics.index') }}">
                             comics
                         </a>
                     </li>
