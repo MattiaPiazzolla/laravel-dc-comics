@@ -183,3 +183,67 @@ footer{
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7441%) hue-rotate(51deg) brightness(116%) contrast(93%);
     }
 }
+
+
+.img_title_section{
+    position: absolute;
+    padding: 7.5px;
+    background-color: #0081F8;
+    color: #fff;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 600; 
+    bottom: -15%;
+    left: -4%;
+    transform: translate(50%);
+
+}
+
+.mini_banner{
+    height: 100px;
+    background-color: #0282F9;
+}
+
+.btn_avilability{
+    border-left: 1px solid black;
+}
+
+.bg-custom-green{
+    background-color: #55BA59;
+}
+
+.bg_custom_grey{
+    margin-top: 150px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #aeaeae;
+}
+
+.table-transparent {
+    background-color: transparent;
+}
+
+.icons_final_section_comic{
+    border-left: 1px solid #aeaeae;
+    border-right: 1px solid #aeaeae;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    p{
+        margin: 0;
+        font-size: 0.75rem;
+    }
+
+    img{
+        max-width: 30px;
+        filter: brightness(0);
+        opacity: 25% ;
+        object-fit: contain;
+    }
+
+}
+
+.m_custom_hr{
+    margin-top: 200px;
+}

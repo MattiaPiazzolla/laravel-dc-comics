@@ -16,7 +16,7 @@ class ComicsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         
-        $numberOfComics = 10;
+        $numberOfComics = 12;
 
         for ($i = 0; $i < $numberOfComics; $i++) {
             $new_comic = new Comic();
@@ -29,6 +29,7 @@ class ComicsTableSeeder extends Seeder
             $new_comic->sale_date = $faker->date(); 
             $new_comic->type = $faker->randomElement(['comic book', 'graphic novel']); 
             $new_comic->artists = json_encode($faker->words(5)); 
+            $new_comic->writers = json_encode($faker->words(5)); 
 
             $new_comic->save();
         }
