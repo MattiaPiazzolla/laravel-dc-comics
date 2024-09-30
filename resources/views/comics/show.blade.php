@@ -2,19 +2,24 @@
 @section('content')
     <div class="jumbo">
         <div class="container position-relative h-100">
-            <div class="img_title_section img-fluid"><img src="{{ $comics->thumb }}" alt=""></div>
+            <div class="img_title_section img-fluid"><img src="{{ $comic->thumb }}" alt=""></div>
         </div>
     </div>
     <div class="mini_banner"></div>
     <div class="bg-light">
         <div class="container">
             <div class="row">
+                <div class="col-12 d-flex justify-content-end my-3">
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-sm btn-primary"><i
+                            class="bi bi-pen"></i>
+                        Modifica</a>
+                </div>
                 <div class="col-7 p-0 mt-5">
-                    <h3 class=" text-uppercase m-0 p-0">{{ $comics->title }}</h3>
+                    <h3 class=" text-uppercase m-0 p-0">{{ $comic->title }}</h3>
                     <div class="row g-0">
                         <div class=" mt-3 col-12 bg-custom-green py-1 px-3">
                             <div class="d-flex text-light justify-content-between align-items-center">
-                                <p class="m-0">U.S. Price: ${{ $comics->price }}</p>
+                                <p class="m-0">U.S. Price: ${{ $comic->price }}</p>
                                 <div class="avilable_section d-flex align-items-center">
                                     <p class="m-0 text-uppercase opacity-50 fw-bold me-4">Available</p>
                                     <div class="btn_avilability">
@@ -35,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-12 mt-3">
-                            <p>{{ $comics->description }}</p>
+                            <p>{{ $comic->description }}</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +61,7 @@
                                 <p>Art by:</p>
                             </div>
                             <div class="col-8">
-                                <p>{{ $comics->artists }}</p>
+                                <p>{{ $comic->artists }}</p>
                                 {{-- come posso rendere più elegante? --}}
                             </div>
                         </div>
@@ -66,7 +71,7 @@
                                 <p>Written by:</p>
                             </div>
                             <div class="col-8">
-                                <p>{{ $comics->writers }}</p>
+                                <p>{{ $comic->writers }}</p>
                             </div>
                         </div>
                         <hr>
@@ -79,7 +84,7 @@
                                 <p>Series:</p>
                             </div>
                             <div class="col-8">
-                                <p>{{ $comics->series }}</p>
+                                <p>{{ $comic->series }}</p>
                             </div>
                         </div>
                         <hr>
@@ -88,7 +93,7 @@
                                 <p>U.S. Price:</p>
                             </div>
                             <div class="col-8">
-                                <p>${{ $comics->price }}</p>
+                                <p>${{ $comic->price }}</p>
                             </div>
                         </div>
                         <hr>
@@ -97,7 +102,7 @@
                                 <p>On Sale Date:</p>
                             </div>
                             <div class="col-8">
-                                <p>{{ $comics->sale_date }}</p>
+                                <p>{{ $comic->sale_date }}</p>
                             </div>
                         </div>
                         <hr>

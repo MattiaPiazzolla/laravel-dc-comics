@@ -8,7 +8,7 @@
     </div>
     <div class="container py-5">
         <div class="row w-100 justify-content-end">
-            <div class="col-12 d-flex justify-content-end mb-3">
+            <div class="col-12 d-flex justify-content-end m-3">
                 <a href="{{ route('comics.create') }}" class="btn btn-sm btn-primary">Aggiungi Fumetto</a>
             </div>
         </div>
