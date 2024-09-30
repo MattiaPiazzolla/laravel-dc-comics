@@ -16,6 +16,12 @@
             @foreach ($comics as $comic)
                 <a class=" text-white text-decoration-none" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                     <div class="col p-2 comic position-relative">
+                        <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="bi bi-trash-fill"></i></button>
+                        </form>
                         <p class="position-absolute priceComic">{{ $comic->price }}</p>
                         <img src="{{ $comic->thumb }}" alt="title" class="comicCover">
                         <p class="comicTitle mb-3 text-uppercase text-light">{{ $comic->title }}</p>
