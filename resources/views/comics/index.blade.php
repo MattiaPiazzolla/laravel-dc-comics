@@ -9,7 +9,7 @@
     <div class="container py-5">
         <div class="row row-cols-lg-6 row-cols-md-4 row-cols-sm-3 row-cols-2 gx-0 comicsSection">
             @foreach ($comics as $comic)
-                <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">
+                <a class=" text-white text-decoration-none" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                     <div class="col p-2 comic position-relative">
                         <p class="position-absolute priceComic">{{ $comic->price }}</p>
                         <img src="{{ $comic->thumb }}" alt="title" class="comicCover">
