@@ -2,7 +2,7 @@
 @section('content')
     <div class="jumbo">
         <div class="container position-relative h-100">
-            <div class="img_title_section"><img src="{{ $comics->thumb }}" alt=""></div>
+            <div class="img_title_section img-fluid"><img src="{{ $comics->thumb }}" alt=""></div>
         </div>
     </div>
     <div class="mini_banner"></div>

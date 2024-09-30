@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Comic;
+use Illuminate\Support\Facades\DB;
 
 class ComicsTableSeeder extends Seeder
 {
@@ -14,24 +15,25 @@ class ComicsTableSeeder extends Seeder
      * @return void
      */
     public function run(Faker $faker)
-    {
-        
-        $numberOfComics = 12;
+{
+    $comics = config('comics');
 
-        for ($i = 0; $i < $numberOfComics; $i++) {
-            $new_comic = new Comic();
-            
-            $new_comic->title = $faker->sentence(3); 
-            $new_comic->description = $faker->paragraph(5); 
-            $new_comic->thumb = $faker->imageUrl(360, 360, 'comics', true); 
-            $new_comic->price = $faker->randomFloat(2, 1, 100); 
-            $new_comic->series = $faker->word(); 
-            $new_comic->sale_date = $faker->date(); 
-            $new_comic->type = $faker->randomElement(['comic book', 'graphic novel']); 
-            $new_comic->artists = json_encode($faker->words(5)); 
-            $new_comic->writers = json_encode($faker->words(5)); 
+    foreach ($comics as $comic) {
+        $new_comic = new Comic();
 
-            $new_comic->save();
-        }
+        $new_comic->title = $comic['title'];
+        $new_comic->description = $comic['description'];
+        $new_comic->thumb = $comic['thumb'];
+        $new_comic->price = $comic['price'];
+        $new_comic->series = $comic['series'];
+        $new_comic->sale_date = $comic['sale_date'];
+        $new_comic->type = $comic['type'];
+        $new_comic->artists = json_encode($comic['artists']);
+        $new_comic->writers = json_encode($comic['writers']);
+        $new_comic->created_at = now();
+        $new_comic->updated_at = now();
+
+        $new_comic->save();
     }
+}
 }

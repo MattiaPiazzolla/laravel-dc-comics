@@ -187,8 +187,8 @@ footer{
 
 .img_title_section{
     position: absolute;
-    padding: 7.5px;
-    background-color: #0081F8;
+    padding: 1px;
+    background-color: #fff;
     color: #fff;
     border: 0;
     font-size: 1.5rem;
@@ -196,6 +196,11 @@ footer{
     bottom: -15%;
     left: -4%;
     transform: translate(50%);
+
+    img{
+        max-width: 200px;
+        object-fit: contain;
+    }
 
 }
 
